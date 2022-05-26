@@ -1,2 +1,2 @@
-# JAVA_Code
-JAVA学习
+# Java_Code
+Java学习
