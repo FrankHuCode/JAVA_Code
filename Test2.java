@@ -1,21 +1,28 @@
 package com.itheima.demo;
 
+import java.util.Scanner;
+
 public class Test2 {
     public static void main(String[] args) {
-        //需求：数组元素最大值
-        //1.定义一个静态初始化数组，用来存储颜值
-        int[] faceScores={15,9000,10000,20000,9500,-5};
-        //2.定义一个变量，用于存储较大值，建议使用数组第一个元素作为初始值
-        int max=faceScores[0];
-        //3.遍历整个数组，并与最大值进行比较，若大于，便赋值
-        for (int i = 1; i < faceScores.length; i++) {
-            //判断大小
-            if(faceScores[i]>max){
-                max=faceScores[i];
+        //需求：输入一个整数，判断该整数是奇数还是偶数，输出提示，使用方法完成
+        Scanner sc=new Scanner(System.in);
+        while(true){
+            System.out.println("请输入一个整数：");
+            int n=sc.nextInt();
+            if(n>=0) {
+                check(n);
+            }else {
+                System.out.println("输入的数不是整数，已退出");
+                break;
             }
         }
-        //4.输出最大值
-        System.out.println("颜值最高的是："+max);
-
+    }
+    public static void check(int n){
+        //判断输入的数是奇数还是偶数
+        if(n%2==0){
+            System.out.println("偶数");
+        }else {
+            System.out.println("奇数");
+        }
     }
 }
