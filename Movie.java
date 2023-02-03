@@ -1,28 +1,18 @@
-package com.itheima.movie;
+package com.itheima.arraylist;
 
 public class Movie {
-
-    //成员变量
     private String name;
     private double score;
-    private double price;
     private String actor;
-    //创建无参构造器
 
     public Movie() {
     }
 
-    //创建一个有参构造器
-
-    public Movie(String name, double score, double price, String actor) {
+    public Movie(String name, double score, String actor) {
         this.name = name;
         this.score = score;
-        this.price = price;
         this.actor = actor;
     }
-
-
-    //提供成套的getter和setter
 
     public String getName() {
         return name;
@@ -30,14 +20,6 @@ public class Movie {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public double getScore() {
@@ -56,3 +38,4 @@ public class Movie {
         this.actor = actor;
     }
 }
+
