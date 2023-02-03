@@ -1,30 +1,29 @@
-package com.itheima.demo;
+package com.itheima.thisdemo;
 
-import java.util.Scanner;
-
+/**
+ * 目标：理解this关键字的作用
+ * a.可以用于指定访问当前对象的成员变量，成员方法
+ *
+ * 1.this出现在有参数构造器中的用法
+ * 2.this出现在成员方法中的用法
+ */
 public class Test1 {
     public static void main(String[] args) {
-        //需求：求1~n的和，并返回结果
-        Scanner sc = new Scanner(System.in);
-        while (true) {
-            System.out.println("请输入求和的数：");
-            int n = sc.nextInt();
-            System.out.println(sum(n));
-            if(n<0){
-                System.out.println("退出");
-                break;
-            }
-        }
-    }
-    public static int sum(int n) {
-        int sum = 0;
-        if(n<0){
-            return -1;
-        }else{
-            for (int i = 0; i <= n; i++) {
-                sum += i;
-            }
-            return sum;
-        }
+        //创建汽车对象
+        Car c = new Car();
+
+        System.out.println("创建对象的地址"+c);
+
+        c.run();
+
+        System.out.println("===============");
+
+        Car c2 = new Car("奔驰", 39.9);
+        System.out.println(c2.name);
+        System.out.println(c2.price);
+        System.out.println("---------------------");
+
+        c2.goMatch("宝马");
+
     }
 }
